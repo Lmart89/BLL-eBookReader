@@ -4,6 +4,20 @@ El objetivo de este proyecto es ofrecer una alternativa con capacidad de persona
 
 Como cerebro y conrazon principal de este proyecto se encuentra el SoM (System on Module) de Luckfox: Luckfox Core Rv1106. entre las ventajas que ofrece es la cantidad de memoria ram, la integracion de wifi y un generoso almacenamiento eMMC de 8GB, mas que suficiente para alojar el sistema operativo, o firmware, y a su vez espacio disponible para los ficheros de usuario. esto hace que su eleccion sea mucho mas practica en comparacion con el esp32-s3 que aunque potente, no tiene ram ni el espacio de almacenamiento que si ofrece el Luckfox core rv1106.
 
+## Caracteristicas base del Bll eBookReader.
+estas son las caracteristicas base que definen el hardware base para el proyecto.
+- Procesador Risc-V o ARM con potente y eficiente.
+- SoC o SoM de tamaño reducido.
+- bajo consumo energetico.
+- soporte de buildroot o linux.
+- soporte de LVGL o FrameWork grafico para desarrollo de UI
+- almacenamiento interno tipo eMMC o Flash Nand de 8 GB.
+- RAM 256MB - 512MB
+- Soporte Wifi/Bluetooth integrado.
+- Soporte para almacenamiento externo tipo micro sd.
+- Pines GPIO suficientes para conexion de dispositivos y futuras expansiones. 
+
+
 ## Roadmap estratégico del BLL eBookReader — RV1106 con Wi-Fi / Bluetooth integrado
 
 ---
