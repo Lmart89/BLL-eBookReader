@@ -1,8 +1,19 @@
 # BLL-eBookReader
-Bll EbookReader es un lector de libros electronicos inspirado en proyectos opensource como el ePDiy v7, y proyectos similares como el OSO-Book Reader, de Joy Castillo.  
-El objetivo de este proyecto es ofrecer una alternativa con capacidad de personalizacion e interaccion fluida, donde sea posible brindar una experiencia de lectura lo mas comoda posible y lo mas similar en cuanto a fluidez, cercana a los Kindle de Amazon, pero a su vez permita ofrecer la modularidad y escalabilidad para futuras mejoras.
+Bll EbookReader es un lector de libros electronicos inspirado en proyectos open-source como el ePDiy v7, proyectos similares como el OSO-Book Reader, de Joy Castillo, e incluso el Esp32-epub reader.  
+El objetivo de este proyecto es ofrecer una alternativa con capacidad de personalizacion e interaccion fluida, donde sea posible brindar una experiencia de lectura lo mas comoda posible y lo mas similar en cuanto a fluidez, cercana a los Kindle de Amazon, pero a su vez permita ofrecer la modularidad y escalabilidad que el usuario requiera ya sea desarrollando su propia implementacion o modificando el sistema a gusto propio.
 
-Como cerebro y conrazon principal de este proyecto se encuentra el SoM (System on Module) de Luckfox: Luckfox Core Rv1106. entre las ventajas que ofrece es la cantidad de memoria ram, la integracion de wifi y un generoso almacenamiento eMMC de 8GB, mas que suficiente para alojar el sistema operativo, o firmware, y a su vez espacio disponible para los ficheros de usuario. esto hace que su eleccion sea mucho mas practica en comparacion con el esp32-s3 que aunque potente, no tiene ram ni el espacio de almacenamiento que si ofrece el Luckfox core rv1106.
+## ¿Porque un SoM 🧩 (System on Module) y no un MCU 🧠 (Microcontrolador)?
+
+Existen muchas razones por las que este proyecto esta enfocado en el uso de un SoM 🧩 y no un mcu; La respuesta a esta pregunta tiene que ver con 3 aspectos fundamentales de este proyecto:
+### 1 - desempeño.
+La mayoria de mcus en el mercado actual tienen un desempeño limitado para tareas pesadas, de alli su bajo precio y facilidad de uso, porque estan diseñados para control y automatizacion de tareas especificas. A diferencia de los mcu, los SoM usan una cpu mas potente y capaz dedicada a tareas y cargas de trabajo mas pesadas.
+### 2 - integracion.
+Generalmente los MCU poseen un nivel de integracion bajo o basico, reuniendo prestaciones muy modestas y ajustadas, asi como la capacidad de conexiones y puertos de datos que ofrecen. la gran mayoria requieren la integracion de componentes adicionales para extender funcionalidad como modulos, o conexiones dedicadas para expandir memoria y conectar otros dispositivos, eso teniendo en cuenta que el almacenamiento es de unos pocos megas, y la cantidad de memoria que manejan es muy pequeña, siendo la maxima cantidad posible en mcus 8 MB.
+El SoM al ser un sistema integrado todo en uno posee la gran mayoria de dispositivos integrados en una placa, con un alto nivel de integracion, eso incluye memoria de almacenamiento emmc, de 2-4-8 GB, Wifi y Ble ya integrados, conectividad usb, procesador y memoria RAM, todo en un modulo de tamaño reducido, sin renunciar a una generosa cantidad de pines disponibles para el usuario para conectividad.
+### 3- flexibilidad de funcionamiento.
+los mcus estan limitados a ejecutar cierto software de programacion basico, como micropython o el indicado por el fabricante, y aunque puede ser altamente personalizable, tiende a ser limitado en cuanto a frameworks de desarrollo y programacion.
+los SoM a ser computadoras embebidas en una placa, y debido a sus prestaciones permiten opciones mucho mas flexibles de desarrollo, entre ellas la capacidad de ejecutar entornos linux y acceso a funcionalidades y librerias extendidas.
+Estos aspectos clave dieron forma las caracteristicas que deben ser incorporadas.
 
 ## Caracteristicas base del Bll eBookReader.
 estas son las caracteristicas base que definen el hardware base para el proyecto.
