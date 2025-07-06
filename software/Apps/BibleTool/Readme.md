@@ -106,7 +106,7 @@ Mateo,1,1,"Libro de la genealogía de Jesucristo, hijo de David, hijo de Abraham
 
 ## Licencia
 
-BibleTool es un proyecto abierto en desarrollo. Licencia a definir.
+BibleTool es un proyecto abierto en desarrollo. Licencia GPLv3
 
 ---
 
