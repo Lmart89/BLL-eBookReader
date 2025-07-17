@@ -1,96 +1,112 @@
-# 📖 Bll eBook Reader
+# 📘 Bll Pilot
 
-**Un lector electrónico versátil, eficiente y con propósito**
+**Bll Pilot** es un proyecto de hardware libre y software de código abierto cuyo propósito es crear un lector de eBooks bíblicos de bajo consumo, enfocado en la simplicidad, portabilidad y larga duración de batería, diseñado especialmente para funcionar en zonas de baja conectividad o para uso personal/devocional.
 
----
-
-## ✨ ¿Qué es el Bll eBook Reader?
-
-El **Bll eBook Reader** es un lector de libros electrónicos creado desde cero, pensado no solo como una alternativa a dispositivos comerciales como el Kindle, sino como una **herramienta versátil de lectura, estudio y organización personal**, especialmente útil para quienes estudian, enseñan o predican la Biblia. Diseñado para funcionar con recursos limitados, es **libre, optimizado y altamente personalizable**.
+> ✝️ *“Bll” representa muchas cosas: por un lado, “Biblia de Lectura Libre”, como un enfoque hacia el acceso abierto a la Palabra. Pero también son las iniciales de tres personas que inspiran profundamente este proyecto: Brillyd (esposa), Lemuel (hijo) y Luis (autor). "Pilot" señala que esta es la primera etapa o base para versiones futuras.*
 
 ---
 
-## 🔧 Hardware
+## 🚀 Estado del proyecto
 
-Este lector se basa en un hardware distinto a la mayoría de dispositivos similares, lo que permite libertad total en su desarrollo y expansión:
+✨ **Actualización clave:** Al adoptar el módulo Core 3506B, el proyecto gana notables ventajas:
 
-- **Procesador**: Luckfox Core RV1106 – Cortex-A7, eficiente y de bajo consumo.
-- **RAM**: 256 MB DDR3
-- **Almacenamiento**: 8 GB eMMC (integrado)
-- **Pantalla**: E-Ink de 6 pulgadas (sin retroiluminación por ahora)
-- **Touch**: Opcional, no habilitado en las primeras versiones
-- **Conectividad**: Wi-Fi / Bluetooth integrados
-- **Sistema Operativo**: Linux personalizado usando **Buildroot**
-- **Placa Base**: Diseño propio (inspirado en proyectos como epdiy v7 pero adaptado al RV1106)
-- **Fuente de alimentación y protección**: Incluye fusibles para proteger el SoM
+- 🧠 Procesador Quad-Core para mejor rendimiento multitarea
+- 🎨 GPU integrada que mejora la fluidez gráfica incluso en pantallas E-Ink
+- 🚀 Duplicación de RAM: de 256MB (anteriormente) a 512MB DDR3L
+- 🔌 Mayor cantidad de pines IO (120), facilitando expansión sin conflictos
 
----
+Estas mejoras colocan al *Bll Pilot* en una posición robusta para futuras funcionalidades sin sacrificar simplicidad ni eficiencia.
 
-## 🚀 Características destacadas
+🔧 En desarrollo activo – Actualmente se encuentra en fase de diseño de hardware y primeros prototipos físicos.
 
-- 🧠 **Ultraligero**: sistema operativo minimalista con lo esencial, optimizado para bajo uso de RAM y energía.
-- 📚 **Soporte para múltiples formatos de eBooks**: EPUB, MOBI, TXT, PDF (parcial).
-- 📖 **Modo Biblia integrado**: navegación optimizada por libros, capítulos y versículos.
-- 📝 **Notas personales**: sistema simple de notas para estudios, bosquejos y predicaciones.
-- 📡 **Actualizaciones inalámbricas** (por Wi-Fi).
-- 📁 **Sistema de archivos organizado** para acceder a libros, notas y documentos con rapidez.
+La primera versión se centrará en:
+- Lectura offline de textos bíblicos
+- Bajo consumo y pantalla de tinta electrónica
+- Interfaz minimalista para navegación fluida
 
 ---
 
-## 🎯 ¿Por qué es diferente?
+## 🔩 Características técnicas
 
-La mayoría de lectores electrónicos están cerrados a modificaciones. El **Bll eBook Reader** es:
+### 🧠 Módulo principal
 
-- ✅ **Totalmente libre y abierto**: el software está bajo licencia GPLv3 y el hardware bajo una licencia de hardware libre.
-- ✅ **Protegido contra la apropiación comercial restrictiva**: cualquier persona que modifique o redistribuya debe mantener la apertura del código y los archivos de hardware.
-- ✅ **Versátil**: no se limita a libros; puede convertirse en una libreta digital, lector de notas pastorales, organizador de predicaciones, etc.
-- ✅ **Diseñado para crecer**: puede extenderse con mejoras como pantalla táctil, retroiluminación o integración con servidores locales para compartir materiales.
+- **Módulo base:** `Luckfox Core 3506B`
+- **Chip:** Rockchip RK3506B
+- **Procesador:** 3× Cortex-A7 + 1× Cortex-M0
+- **RAM:** 512 MB DDR3L externa
+- **Almacenamiento:** eMMC 8 GB por defecto
+- **Almacenamiento soportado:** SPI Flash / eMMC / SDMMC
+- **RM_IO:** 32 pines Rockchip Matrix IO
+- **GPU:** Aceleración 2D/3D integrada
+- **Conectividad:** USB host, soporte para Wi-Fi vía dongle USB (o versión Lyra W con Wi-Fi onboard)
+- **Dimensiones:** 32 mm × 32 mm
+- **Conectores:** 120 pines tipo *stamp hole*
+
+
+
+
+### 🖥️ Pantalla
+- Tipo: Pantalla E-Ink ED060XD4 (6 pulgadas, reciclada de Kindle)
+- Interfaz: SPI
+- Controlador: Requiere PMIC externo (como TPS65185)
+
+### 🔌 Conectividad
+- Táctil capacitivo (opcional, vía I2C)
+- MicroSD (opcional)
+- USB tipo C para carga y datos
+
+### 🔋 Energía
+- Batería de polímero de litio (con circuito de protección y carga)
+- Circuito de bajo consumo en standby
+
+
+---
+
+## 📱 Software
+
+El sistema estará basado en:
+- 🐧 **Linux embebido** con Buildroot
+- 🧱 Interfaz ligera (basada en LVGL o framebuffer directo)
+- 📖 Motor de renderizado de textos optimizado para pantallas E-Ink
+- 🕮 Indexación de la Biblia en diferentes versiones
+- ⛺ Posibilidad de agregar documentos EPUB, TXT o formatos ligeros
+
 
 ---
 
-## 🧱 Estado del desarrollo
+## 🔓 Licencia
 
-- [x] Diseño del PCB personalizado
-- [x] Integración básica con pantalla E-Ink
-- [x] Sistema Linux embebido funcional (Buildroot)
-- [ ] Interfaz gráfica liviana con **LVGL**
-- [ ] Modo Biblia con navegación completa
-- [ ] Sistema de notas sencillo
-- [ ] Conectividad Wi-Fi funcional y segura
-- [ ] Soporte para sincronización o backup
+### 🔧 Hardware
+Este proyecto está licenciado bajo la **CERN Open Hardware License v2 – Strongly Reciprocal (CERN OHL v2-S)**.
 
----
+> Esto significa que cualquier derivado del hardware deberá mantenerse igualmente abierto y compartido con la comunidad.
 
-## 💡 Casos de uso
+### 💾 Software
+El software se publica bajo la **GNU General Public License v3.0 (GPLv3)**.
 
-- Lectura diaria de la Biblia y devocionales
-- Acceso a libros de estudio teológico
-- Organización de bosquejos para sermones
-- Anotaciones rápidas durante clases o reuniones
-- Lectura offline de contenido útil sin distracciones
+> Esta licencia protege las libertades de uso, estudio, modificación y distribución del código, asegurando que permanezca siempre libre para todos los usuarios.
+
 
 ---
 
-## 📜 Licencia
+## 🧭 Visión futura
 
-### Software
+**Bll Pilot** nace como una plataforma que va más allá de ser un lector de eBooks:
 
-Este proyecto se distribuye bajo los términos de la **GNU General Public License v3.0 (GPLv3)**.  
-Esto garantiza que cualquier persona que modifique o redistribuya el software **debe mantenerlo libre y accesible** bajo la misma licencia.
+- 📖 Herramienta de estudio bíblico portátil
+- ⛺ Recurso para comunidades en zonas rurales o de difícil acceso
+- 🛠️ Plataforma educativa para makers que deseen aprender sobre hardware embebido
+- 📚 Dispositivo de lectura privada o devocional
 
-Consulta el archivo [`LICENSE`](./LICENSE) para más información.
-
-### Hardware
-
-Los archivos de hardware (esquemáticos, PCB, listas de materiales) se publican como **Open Hardware** bajo la licencia  
-**CERN Open Hardware License v2 – Strongly Reciprocal**.  
-Esto significa que:
-
-- Puedes usar, estudiar, modificar y fabricar este hardware.
-- Si lo redistribuyes o haces productos derivados, **debes también liberar tus archivos bajo la misma licencia**.
-- **No está permitido cerrarlo ni venderlo como producto propietario** sin publicar tus modificaciones.
-
-Consulta el archivo [`hardware/LICENSE`](./hardware/LICENSE) para más información.
+Más adelante podrían desarrollarse versiones ampliadas, con audio, conectividad Wi-Fi permanente, y sincronización de notas o planes de lectura.
 
 ---
+
+## 🙏 Créditos y agradecimientos
+
+Proyecto impulsado por Luis E. Martínez S., con pasión por la electrónica, la Biblia, y el aprendizaje autodidacta.
+
+Inspirado en la necesidad de crear herramientas útiles, abiertas y accesibles para todos.
+
+> *Soli Deo Gloria.*
 
