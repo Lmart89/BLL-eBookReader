@@ -12873,8 +12873,8 @@ Ideal para aplicaciones embebidas con pantallas e-paper monocromáticas o en esc
 <pin name="P$55" x="25.4" y="-50.8" length="middle" rot="R90"/>
 <pin name="UART0-RX" x="27.94" y="-50.8" length="middle" rot="R90"/>
 <pin name="UART0-TX" x="30.48" y="-50.8" length="middle" rot="R90"/>
-<pin name="P$58" x="33.02" y="-50.8" length="middle" rot="R90"/>
-<pin name="SPI0-CSN0" x="35.56" y="-50.8" length="middle" rot="R90"/>
+<pin name="I2C2-SDA" x="33.02" y="-50.8" length="middle" rot="R90"/>
+<pin name="I2C2-SCL" x="35.56" y="-50.8" length="middle" rot="R90"/>
 <pin name="SPI0-MISO" x="38.1" y="-50.8" length="middle" rot="R90"/>
 <pin name="SPI0-MOSI" x="53.34" y="-35.56" length="middle" rot="R180"/>
 <pin name="SPI0-CLK" x="53.34" y="-33.02" length="middle" rot="R180"/>
@@ -12889,8 +12889,8 @@ Ideal para aplicaciones embebidas con pantallas e-paper monocromáticas o en esc
 <pin name="GND7" x="53.34" y="-10.16" length="middle" rot="R180"/>
 <pin name="P$72" x="53.34" y="-7.62" length="middle" rot="R180"/>
 <pin name="P$73" x="53.34" y="-5.08" length="middle" rot="R180"/>
-<pin name="P$74" x="53.34" y="-2.54" length="middle" rot="R180"/>
-<pin name="P$75" x="53.34" y="0" length="middle" rot="R180"/>
+<pin name="I2C0-SCL" x="53.34" y="-2.54" length="middle" rot="R180"/>
+<pin name="I2C0-SDA" x="53.34" y="0" length="middle" rot="R180"/>
 <pin name="P$76" x="53.34" y="2.54" length="middle" rot="R180"/>
 <pin name="P$77" x="53.34" y="5.08" length="middle" rot="R180"/>
 <pin name="P$78" x="53.34" y="7.62" length="middle" rot="R180"/>
@@ -13129,6 +13129,10 @@ interfaces gráficas simples o dispositivos portátiles. Requiere placa base par
 <connect gate="G$1" pin="GND7" pad="P$71"/>
 <connect gate="G$1" pin="GND8" pad="P$81"/>
 <connect gate="G$1" pin="GND9" pad="P$88"/>
+<connect gate="G$1" pin="I2C0-SCL" pad="P$74"/>
+<connect gate="G$1" pin="I2C0-SDA" pad="P$75"/>
+<connect gate="G$1" pin="I2C2-SCL" pad="P$59"/>
+<connect gate="G$1" pin="I2C2-SDA" pad="P$58"/>
 <connect gate="G$1" pin="P$10" pad="P$10"/>
 <connect gate="G$1" pin="P$11" pad="P$11"/>
 <connect gate="G$1" pin="P$114" pad="P$114"/>
@@ -13168,14 +13172,11 @@ interfaces gráficas simples o dispositivos portátiles. Requiere placa base par
 <connect gate="G$1" pin="P$53" pad="P$53"/>
 <connect gate="G$1" pin="P$54" pad="P$54"/>
 <connect gate="G$1" pin="P$55" pad="P$55"/>
-<connect gate="G$1" pin="P$58" pad="P$58"/>
 <connect gate="G$1" pin="P$65" pad="P$65"/>
 <connect gate="G$1" pin="P$66" pad="P$66"/>
 <connect gate="G$1" pin="P$67" pad="P$67"/>
 <connect gate="G$1" pin="P$72" pad="P$72"/>
 <connect gate="G$1" pin="P$73" pad="P$73"/>
-<connect gate="G$1" pin="P$74" pad="P$74"/>
-<connect gate="G$1" pin="P$75" pad="P$75"/>
 <connect gate="G$1" pin="P$76" pad="P$76"/>
 <connect gate="G$1" pin="P$77" pad="P$77"/>
 <connect gate="G$1" pin="P$78" pad="P$78"/>
@@ -13195,7 +13196,6 @@ interfaces gráficas simples o dispositivos portátiles. Requiere placa base par
 <connect gate="G$1" pin="SD-D2" pad="P$102"/>
 <connect gate="G$1" pin="SD-D3" pad="P$101"/>
 <connect gate="G$1" pin="SPI0-CLK" pad="P$62"/>
-<connect gate="G$1" pin="SPI0-CSN0" pad="P$59"/>
 <connect gate="G$1" pin="SPI0-CSN1" pad="P$63"/>
 <connect gate="G$1" pin="SPI0-MISO" pad="P$60"/>
 <connect gate="G$1" pin="SPI0-MOSI" pad="P$61"/>
@@ -13222,6 +13222,243 @@ interfaces gráficas simples o dispositivos portátiles. Requiere placa base par
 <connect gate="G$1" pin="VCC-5V1" pad="P$85"/>
 <connect gate="G$1" pin="VCC-5V2" pad="P$86"/>
 <connect gate="G$1" pin="VCC-5V3" pad="P$87"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="LT8912B">
+<packages>
+<package name="LT8912B">
+<wire x1="-3.9" y1="3.8" x2="-3.9" y2="-3.9" width="0.127" layer="21" style="shortdash" locked="yes"/>
+<wire x1="-3.9" y1="-3.9" x2="3.9" y2="-3.9" width="0.127" layer="21" style="shortdash" locked="yes"/>
+<wire x1="3.9" y1="-3.9" x2="3.9" y2="3.9" width="0.127" layer="21" style="dashdot" locked="yes"/>
+<wire x1="3.9" y1="3.9" x2="-3.9" y2="3.9" width="0.127" layer="21" style="shortdash" locked="yes"/>
+<circle x="0" y="0" locked="yes" radius="0.1" width="0.127" layer="21"/>
+<smd name="P0" x="-3.9" y="3" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P1" x="-3.9" y="2.6" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P2" x="-3.9" y="2.2" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P3" x="-3.9" y="1.8" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P4" x="-3.9" y="1.4" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P5" x="-3.9" y="1" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P6" x="-3.9" y="0.6" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P7" x="-3.9" y="0.2" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P8" x="-3.9" y="-0.2" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P9" x="-3.9" y="-0.6" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P10" x="-3.9" y="-1" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P11" x="-3.9" y="-1.4" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P12" x="-3.9" y="-1.8" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P13" x="-3.9" y="-2.2" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P14" x="-3.9" y="-2.6" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P15" x="-3.9" y="-3" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P16" x="3.9" y="-3" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P17" x="3.9" y="-2.6" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P18" x="3.9" y="-2.2" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P19" x="3.9" y="-1.8" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P20" x="3.9" y="-1.4" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P21" x="3.9" y="-1" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P22" x="3.9" y="-0.6" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P23" x="3.9" y="-0.2" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P24" x="3.9" y="0.2" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P25" x="3.9" y="0.6" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P26" x="3.9" y="1" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P27" x="3.9" y="1.4" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P28" x="3.9" y="1.8" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P29" x="3.9" y="2.2" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P30" x="3.9" y="2.6" dx="1.3" dy="0.2" layer="1"/>
+<smd name="P31" x="3.9" y="3" dx="1.3" dy="0.2" layer="1"/>
+<text x="-2.4" y="4.364065625" size="0.8" layer="25">LT8912B</text>
+<smd name="P32" x="-3" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P33" x="-2.6" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P34" x="-2.2" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P35" x="-1.8" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P36" x="-1.4" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P37" x="-1" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P38" x="-0.6" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P39" x="-0.2" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P40" x="0.2" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P41" x="0.6" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P42" x="1" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P43" x="1.4" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P44" x="1.8" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P45" x="2.2" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P46" x="2.6" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P47" x="3" y="-3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P48" x="3" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P49" x="2.6" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P50" x="2.2" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P51" x="1.8" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P52" x="1.4" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P53" x="1" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P54" x="0.6" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P55" x="0.2" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P56" x="-0.2" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P57" x="-0.6" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P58" x="-1" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P59" x="-1.4" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P60" x="-1.8" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P61" x="-2.2" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P62" x="-2.6" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<smd name="P63" x="-3" y="3.9" dx="1.3" dy="0.2" layer="1" rot="R90"/>
+<rectangle x1="-3" y1="-3" x2="3" y2="3" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="LT8912B">
+<pin name="MIPI-RX0-DP" x="-35.56" y="17.78" length="middle"/>
+<pin name="MIPI-RX0-DN" x="-35.56" y="15.24" length="middle"/>
+<pin name="MIPI-RX1-DP" x="-35.56" y="12.7" length="middle"/>
+<pin name="MIPI-RX1-DN" x="-35.56" y="10.16" length="middle"/>
+<pin name="VCCA-MIPI-RX" x="-35.56" y="7.62" length="middle"/>
+<pin name="VSSA-MIPI-RX" x="-35.56" y="5.08" length="middle"/>
+<pin name="MIPI-RX-CKP" x="-35.56" y="2.54" length="middle"/>
+<pin name="MIPI-RX-CKN" x="-35.56" y="0" length="middle"/>
+<pin name="MIPI-RX2-DP" x="-35.56" y="-2.54" length="middle"/>
+<pin name="MIPI-RX2-DN" x="-35.56" y="-5.08" length="middle"/>
+<pin name="MIPI-RX3-DP" x="-35.56" y="-7.62" length="middle"/>
+<pin name="MIPI-RX3-DN" x="-35.56" y="-10.16" length="middle"/>
+<pin name="R6K" x="-35.56" y="-12.7" length="middle"/>
+<pin name="HPD-CBUS" x="-35.56" y="-15.24" length="middle"/>
+<pin name="VBUS" x="-35.56" y="-17.78" length="middle"/>
+<pin name="USB-ID" x="-35.56" y="-20.32" length="middle"/>
+<pin name="VSS" x="-15.24" y="-35.56" length="middle" rot="R90"/>
+<pin name="VDD" x="-12.7" y="-35.56" length="middle" rot="R90"/>
+<pin name="USB-DP" x="-10.16" y="-35.56" length="middle" rot="R90"/>
+<pin name="USB-DN" x="-7.62" y="-35.56" length="middle" rot="R90"/>
+<pin name="HDMITX-CKN" x="-5.08" y="-35.56" length="middle" rot="R90"/>
+<pin name="HDMITX-CKP" x="-2.54" y="-35.56" length="middle" rot="R90"/>
+<pin name="VSSA-HDMITX" x="0" y="-35.56" length="middle" rot="R90"/>
+<pin name="HDMITX0-DN" x="2.54" y="-35.56" length="middle" rot="R90"/>
+<pin name="HDMITX0-DP" x="5.08" y="-35.56" length="middle" rot="R90"/>
+<pin name="VCCA-HDMITX" x="7.62" y="-35.56" length="middle" rot="R90"/>
+<pin name="HDMITX1-DN" x="10.16" y="-35.56" length="middle" rot="R90"/>
+<pin name="HDMITX1-DP" x="12.7" y="-35.56" length="middle" rot="R90"/>
+<pin name="VSSA-HDMITX2" x="15.24" y="-35.56" length="middle" rot="R90"/>
+<pin name="HDMITX2-DN" x="17.78" y="-35.56" length="middle" rot="R90"/>
+<pin name="HDMITX2-DP" x="20.32" y="-35.56" length="middle" rot="R90"/>
+<pin name="VSS2" x="22.86" y="-35.56" length="middle" rot="R90"/>
+<pin name="VDD2" x="45.72" y="-20.32" length="middle" rot="R180"/>
+<pin name="VCCA-HDMIPLL" x="45.72" y="-17.78" length="middle" rot="R180"/>
+<pin name="LPF" x="45.72" y="-15.24" length="middle" rot="R180"/>
+<pin name="VSSA-HDMIPLL" x="45.72" y="-12.7" length="middle" rot="R180"/>
+<pin name="LVDSTX3-DP" x="45.72" y="-10.16" length="middle" rot="R180"/>
+<pin name="LVDSTX3-DN" x="45.72" y="-7.62" length="middle" rot="R180"/>
+<pin name="LVDSTX-CKP" x="45.72" y="-5.08" length="middle" rot="R180"/>
+<pin name="LVDSTX-CKN" x="45.72" y="-2.54" length="middle" rot="R180"/>
+<pin name="VCCA-LVDSTX" x="45.72" y="0" length="middle" rot="R180"/>
+<pin name="VSSA-LVDSTX" x="45.72" y="2.54" length="middle" rot="R180"/>
+<pin name="LVDSTX2-DP" x="45.72" y="5.08" length="middle" rot="R180"/>
+<pin name="LVDSTX2-DN" x="45.72" y="7.62" length="middle" rot="R180"/>
+<pin name="LVDSTX1-DP" x="45.72" y="10.16" length="middle" rot="R180"/>
+<pin name="LVDSTX1-DN" x="45.72" y="12.7" length="middle" rot="R180"/>
+<pin name="LVDSTX0-DP" x="45.72" y="15.24" length="middle" rot="R180"/>
+<pin name="LVDSTX0-DN" x="45.72" y="17.78" length="middle" rot="R180"/>
+<pin name="VSSA-SYSCLK" x="22.86" y="35.56" length="middle" rot="R270"/>
+<pin name="VCCA-SYSCLK" x="20.32" y="35.56" length="middle" rot="R270"/>
+<pin name="VSSA-LVDSPLL" x="17.78" y="35.56" length="middle" rot="R270"/>
+<pin name="VCCA-LVDSPLL" x="15.24" y="35.56" length="middle" rot="R270"/>
+<pin name="XTALI" x="12.7" y="35.56" length="middle" rot="R270"/>
+<pin name="XTAL0" x="10.16" y="35.56" length="middle" rot="R270"/>
+<pin name="REF-CLK" x="7.62" y="35.56" length="middle" rot="R270"/>
+<pin name="VSS3" x="5.08" y="35.56" length="middle" rot="R270"/>
+<pin name="VDD3" x="2.54" y="35.56" length="middle" rot="R270"/>
+<pin name="SD0-CEC" x="0" y="35.56" length="middle" rot="R270"/>
+<pin name="WS-I" x="-2.54" y="35.56" length="middle" rot="R270"/>
+<pin name="SCLK-I" x="-5.08" y="35.56" length="middle" rot="R270"/>
+<pin name="S-SDA" x="-7.62" y="35.56" length="middle" rot="R270"/>
+<pin name="S-SCL" x="-10.16" y="35.56" length="middle" rot="R270"/>
+<pin name="INT" x="-12.7" y="35.56" length="middle" rot="R270"/>
+<pin name="RESET-N" x="-15.24" y="35.56" length="middle" rot="R270"/>
+<wire x1="-30.48" y1="30.48" x2="40.64" y2="30.48" width="0.254" layer="94"/>
+<wire x1="40.64" y1="30.48" x2="40.64" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="40.64" y1="-30.48" x2="-30.48" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="-30.48" y1="-30.48" x2="-30.48" y2="30.48" width="0.254" layer="94"/>
+<text x="-12.7" y="2.54" size="2.54" layer="94">     Longtium
+LT8912B QFN64</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LT8912B">
+<description>The Lontium LT8912 MIPI® DSI to LVDS and HDMI/MHL bridge features a single-channel MIPI® D-PHY receiver
+front-end configuration with 4 data lanes per channel operating at 1.5Gbps per data lane and a maximum input
+bandwidth of 6Gbps.
+For screen application, the bridge decodes MIPI® DSI 18bpp RGB666 and 24bpp RGB888 packets and converts
+the formatted video data stream to a compatible LVDS output operating at pixel clock operating from 25MHz to
+154MHz, offering a single-link LVDS with 4 data lanes per link.</description>
+<gates>
+<gate name="G$1" symbol="LT8912B" x="-5.08" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="LT8912B">
+<connects>
+<connect gate="G$1" pin="HDMITX-CKN" pad="P37"/>
+<connect gate="G$1" pin="HDMITX-CKP" pad="P38"/>
+<connect gate="G$1" pin="HDMITX0-DN" pad="P40"/>
+<connect gate="G$1" pin="HDMITX0-DP" pad="P41"/>
+<connect gate="G$1" pin="HDMITX1-DN" pad="P43"/>
+<connect gate="G$1" pin="HDMITX1-DP" pad="P44"/>
+<connect gate="G$1" pin="HDMITX2-DN" pad="P46"/>
+<connect gate="G$1" pin="HDMITX2-DP" pad="P47"/>
+<connect gate="G$1" pin="HPD-CBUS" pad="P13"/>
+<connect gate="G$1" pin="INT" pad="P62"/>
+<connect gate="G$1" pin="LPF" pad="P19"/>
+<connect gate="G$1" pin="LVDSTX-CKN" pad="P24"/>
+<connect gate="G$1" pin="LVDSTX-CKP" pad="P23"/>
+<connect gate="G$1" pin="LVDSTX0-DN" pad="P32"/>
+<connect gate="G$1" pin="LVDSTX0-DP" pad="P31"/>
+<connect gate="G$1" pin="LVDSTX1-DN" pad="P30"/>
+<connect gate="G$1" pin="LVDSTX1-DP" pad="P29"/>
+<connect gate="G$1" pin="LVDSTX2-DN" pad="P28"/>
+<connect gate="G$1" pin="LVDSTX2-DP" pad="P27"/>
+<connect gate="G$1" pin="LVDSTX3-DN" pad="P22"/>
+<connect gate="G$1" pin="LVDSTX3-DP" pad="P21"/>
+<connect gate="G$1" pin="MIPI-RX-CKN" pad="P7"/>
+<connect gate="G$1" pin="MIPI-RX-CKP" pad="P6"/>
+<connect gate="G$1" pin="MIPI-RX0-DN" pad="P1"/>
+<connect gate="G$1" pin="MIPI-RX0-DP" pad="P0"/>
+<connect gate="G$1" pin="MIPI-RX1-DN" pad="P3"/>
+<connect gate="G$1" pin="MIPI-RX1-DP" pad="P2"/>
+<connect gate="G$1" pin="MIPI-RX2-DN" pad="P9"/>
+<connect gate="G$1" pin="MIPI-RX2-DP" pad="P8"/>
+<connect gate="G$1" pin="MIPI-RX3-DN" pad="P11"/>
+<connect gate="G$1" pin="MIPI-RX3-DP" pad="P10"/>
+<connect gate="G$1" pin="R6K" pad="P12"/>
+<connect gate="G$1" pin="REF-CLK" pad="P54"/>
+<connect gate="G$1" pin="RESET-N" pad="P63"/>
+<connect gate="G$1" pin="S-SCL" pad="P61"/>
+<connect gate="G$1" pin="S-SDA" pad="P60"/>
+<connect gate="G$1" pin="SCLK-I" pad="P59"/>
+<connect gate="G$1" pin="SD0-CEC" pad="P57"/>
+<connect gate="G$1" pin="USB-DN" pad="P36"/>
+<connect gate="G$1" pin="USB-DP" pad="P35"/>
+<connect gate="G$1" pin="USB-ID" pad="P15"/>
+<connect gate="G$1" pin="VBUS" pad="P14"/>
+<connect gate="G$1" pin="VCCA-HDMIPLL" pad="P18"/>
+<connect gate="G$1" pin="VCCA-HDMITX" pad="P42"/>
+<connect gate="G$1" pin="VCCA-LVDSPLL" pad="P51"/>
+<connect gate="G$1" pin="VCCA-LVDSTX" pad="P25"/>
+<connect gate="G$1" pin="VCCA-MIPI-RX" pad="P4"/>
+<connect gate="G$1" pin="VCCA-SYSCLK" pad="P49"/>
+<connect gate="G$1" pin="VDD" pad="P34"/>
+<connect gate="G$1" pin="VDD2" pad="P17"/>
+<connect gate="G$1" pin="VDD3" pad="P56"/>
+<connect gate="G$1" pin="VSS" pad="P33"/>
+<connect gate="G$1" pin="VSS2" pad="P16"/>
+<connect gate="G$1" pin="VSS3" pad="P55"/>
+<connect gate="G$1" pin="VSSA-HDMIPLL" pad="P20"/>
+<connect gate="G$1" pin="VSSA-HDMITX" pad="P39"/>
+<connect gate="G$1" pin="VSSA-HDMITX2" pad="P45"/>
+<connect gate="G$1" pin="VSSA-LVDSPLL" pad="P50"/>
+<connect gate="G$1" pin="VSSA-LVDSTX" pad="P26"/>
+<connect gate="G$1" pin="VSSA-MIPI-RX" pad="P5"/>
+<connect gate="G$1" pin="VSSA-SYSCLK" pad="P48"/>
+<connect gate="G$1" pin="WS-I" pad="P58"/>
+<connect gate="G$1" pin="XTAL0" pad="P53"/>
+<connect gate="G$1" pin="XTALI" pad="P52"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -13339,21 +13576,26 @@ interfaces gráficas simples o dispositivos portátiles. Requiere placa base par
 <part name="SUPPLY16" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY17" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY18" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="U$2" library="LT8912B" deviceset="LT8912B" device=""/>
+<part name="SUPPLY19" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="-200.66" y="78.74" size="5.08" layer="91">CONEXION USB C</text>
-<text x="-86.36" y="83.82" size="4.5" layer="91">PUERTO MICRO SD</text>
-<text x="-220.98" y="27.94" size="4.5" layer="91">PWR 3.3V</text>
-<text x="-144.78" y="22.86" size="4.5" layer="91">battery/usb 
+<text x="-88.9" y="88.9" size="4.5" layer="91">PUERTO MICRO SD</text>
+<text x="-205.74" y="27.94" size="4.5" layer="91">PWR 3.3V</text>
+<text x="-139.7" y="27.94" size="4.5" layer="91">battery/usb 
 switching</text>
-<text x="-226.06" y="-20.32" size="4.5" layer="91">ePaper Display Power</text>
+<text x="-170.18" y="-15.24" size="4.5" layer="91">ePaper Display Power</text>
 <text x="193.04" y="63.5" size="4.5" layer="91">ePaper Display Connector
 34pin 0.5 mm pitch</text>
 <text x="17.78" y="119.38" size="10.16" layer="94" font="vector" ratio="10" align="bottom-center">BLL Ebook Reader
 Based on Luckfox Core 3506B
 EPDC IT8951E-64</text>
+<text x="347.98" y="121.92" size="4.5" layer="91">ePaper Display Controller
+</text>
+<text x="50.8" y="-86.36" size="5.08" layer="91">DSI-2-HDMI/LVDS-out</text>
 </plain>
 <instances>
 <instance part="J1" gate="A" x="243.84" y="50.8" smashed="yes">
@@ -13700,6 +13942,10 @@ EPDC IT8951E-64</text>
 <instance part="SUPPLY18" gate="GND" x="421.64" y="81.28" smashed="yes">
 <attribute name="VALUE" x="419.735" y="78.105" size="1.778" layer="96"/>
 </instance>
+<instance part="U$2" gate="G$1" x="78.74" y="-142.24" smashed="yes"/>
+<instance part="SUPPLY19" gate="GND" x="2.54" y="43.18" smashed="yes">
+<attribute name="VALUE" x="0.635" y="40.005" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -13985,6 +14231,19 @@ EPDC IT8951E-64</text>
 <wire x1="132.08" y1="45.72" x2="132.08" y2="48.26" width="0.1524" layer="91"/>
 <junction x="132.08" y="45.72"/>
 <junction x="132.08" y="48.26"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GND"/>
+<pinref part="SUPPLY19" gate="GND" pin="GND"/>
+<wire x1="27.94" y1="45.72" x2="7.62" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="GND2"/>
+<wire x1="27.94" y1="38.1" x2="7.62" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="38.1" x2="7.62" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="45.72" x2="2.54" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="GND3"/>
+<wire x1="27.94" y1="30.48" x2="7.62" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="30.48" x2="7.62" y2="38.1" width="0.1524" layer="91"/>
+<junction x="7.62" y="38.1"/>
 </segment>
 </net>
 <net name="VBUS" class="0">
@@ -14922,6 +15181,103 @@ EPDC IT8951E-64</text>
 <wire x1="327.66" y1="22.86" x2="314.96" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="DSI-CKN" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="DSI-CLKN"/>
+<wire x1="27.94" y1="50.8" x2="12.7" y2="50.8" width="0.1524" layer="91"/>
+<label x="12.7" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="MIPI-RX-CKN"/>
+<wire x1="43.18" y1="-142.24" x2="30.48" y2="-142.24" width="0.1524" layer="91"/>
+<label x="30.48" y="-142.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DSI-CKP" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="DSI-CLKP"/>
+<wire x1="27.94" y1="48.26" x2="12.7" y2="48.26" width="0.1524" layer="91"/>
+<label x="12.7" y="48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="MIPI-RX-CKP"/>
+<wire x1="43.18" y1="-139.7" x2="30.48" y2="-139.7" width="0.1524" layer="91"/>
+<label x="30.48" y="-139.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DSI1-DN" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="DSI-D1N"/>
+<wire x1="27.94" y1="43.18" x2="12.7" y2="43.18" width="0.1524" layer="91"/>
+<label x="12.7" y="43.18" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="MIPI-RX1-DN"/>
+<wire x1="43.18" y1="-132.08" x2="30.48" y2="-132.08" width="0.1524" layer="91"/>
+<label x="30.48" y="-132.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DSI1-DP" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="DSI-D1P"/>
+<wire x1="27.94" y1="40.64" x2="12.7" y2="40.64" width="0.1524" layer="91"/>
+<label x="12.7" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="MIPI-RX1-DP"/>
+<wire x1="43.18" y1="-129.54" x2="30.48" y2="-129.54" width="0.1524" layer="91"/>
+<label x="30.48" y="-129.54" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DSI0-DN" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="DSI-D0N"/>
+<wire x1="27.94" y1="35.56" x2="12.7" y2="35.56" width="0.1524" layer="91"/>
+<label x="12.7" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="MIPI-RX0-DN"/>
+<wire x1="43.18" y1="-127" x2="30.48" y2="-127" width="0.1524" layer="91"/>
+<label x="30.48" y="-127" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DSI0-DP" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="DSI-D0P"/>
+<wire x1="27.94" y1="33.02" x2="12.7" y2="33.02" width="0.1524" layer="91"/>
+<label x="12.7" y="33.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="MIPI-RX0-DP"/>
+<wire x1="43.18" y1="-124.46" x2="30.48" y2="-124.46" width="0.1524" layer="91"/>
+<label x="30.48" y="-124.46" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="I2C-SDA" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="I2C2-SDA"/>
+<wire x1="111.76" y1="-38.1" x2="111.76" y2="-48.26" width="0.1524" layer="91"/>
+<label x="111.76" y="-50.8" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="S-SDA"/>
+<wire x1="71.12" y1="-106.68" x2="71.12" y2="-96.52" width="0.1524" layer="91"/>
+<label x="71.12" y="-104.14" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="I2C-SCL" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="I2C2-SCL"/>
+<wire x1="114.3" y1="-38.1" x2="114.3" y2="-48.26" width="0.1524" layer="91"/>
+<label x="114.3" y="-50.8" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="S-SCL"/>
+<wire x1="68.58" y1="-106.68" x2="68.58" y2="-99.06" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="-96.52" x2="68.58" y2="-99.06" width="0.1524" layer="91"/>
+<label x="68.58" y="-104.14" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -14957,6 +15313,10 @@ for full support of SPICE simulation.
 Since Version 9.0, EAGLE supports the align property for labels. 
 Labels in schematic will not be understood with this version. Update EAGLE to the latest version 
 for full support of labels. 
+</note>
+<note version="8.5" severity="warning">
+Since Version 8.5, EAGLE supports locking for holes, vias, wires and polygons. 
+The locking property on all objects of these types will not be understood in this version. 
 </note>
 </compatibility>
 </eagle>
