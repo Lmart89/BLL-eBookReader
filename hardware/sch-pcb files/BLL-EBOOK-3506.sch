@@ -14182,6 +14182,92 @@ Module</text>
 </deviceset>
 </devicesets>
 </library>
+<library name="usb-wifi-dongle">
+<packages>
+<package name="USB-A-SMT-MALE">
+<description>&lt;h3&gt;USB Type 'A' Male Connector - SMT&lt;/h3&gt;
+Shield pins may be grounded.
+&lt;br&gt; tDocu shows plug end. 
+&lt;p&gt;Specifications:
+&lt;ul&gt;&lt;li&gt;Pin count:6&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=” http://www.molex.com/pdm_docs/sd/480371000_sd.pdf”&gt;Datasheet referenced for footprint&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;USB_A&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="D+1" x="-8.1" y="1.027" dx="3.5" dy="0.8" layer="1" rot="R180"/>
+<smd name="D-1" x="-8.1" y="-1.027" dx="3.5" dy="0.8" layer="1" rot="R180"/>
+<smd name="GND1" x="-8.1" y="3.5508" dx="3.5" dy="0.8" layer="1" rot="R180"/>
+<smd name="VBUS1" x="-8.1" y="-3.5" dx="3.5" dy="0.8" layer="1" rot="R180"/>
+<wire x1="-10" y1="4.5" x2="-10" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="-10" y1="-4.5" x2="10" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="10" y1="-4.5" x2="19" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="19" y1="-4.5" x2="19" y2="4.5" width="0.127" layer="21"/>
+<wire x1="19" y1="4.5" x2="10" y2="4.5" width="0.127" layer="21"/>
+<wire x1="10" y1="4.5" x2="-10" y2="4.5" width="0.127" layer="21"/>
+<wire x1="10" y1="-4.5" x2="10" y2="4.5" width="0.127" layer="21"/>
+<wire x1="10.5" y1="-0.5" x2="14" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="14" y1="-3" x2="14" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="14" y1="2.5" x2="14" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="14" y1="-0.5" x2="16" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="18" y1="-0.5" x2="18" y2="2.5" width="0.127" layer="21"/>
+<wire x1="18" y1="-3" x2="18" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="18" y1="-0.5" x2="16" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="16" y1="-0.5" x2="16" y2="2.5" width="0.127" layer="21"/>
+<wire x1="16" y1="-0.5" x2="16" y2="-3" width="0.127" layer="21"/>
+<text x="12" y="3" size="1.27" layer="21">Antena</text>
+<text x="-3" y="1" size="1.27" layer="21">Modulo Wifi</text>
+<text x="-6" y="3" size="1.27" layer="21">GND</text>
+<text x="-6" y="0.5" size="1.27" layer="21">D+</text>
+<text x="-6" y="-1.5" size="1.27" layer="21">D-</text>
+<text x="-6" y="-4" size="1.27" layer="21">VBUS</text>
+</package>
+</packages>
+<symbols>
+<symbol name="USB-WIFI-DONGLE">
+<wire x1="-15.24" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="0" x2="-7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="12.7" x2="7.62" y2="12.7" width="0.254" layer="94"/>
+<wire x1="7.62" y1="12.7" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="12.7" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="94">  USB 
+Dongle</text>
+<pin name="P$1" x="-15.24" y="10.16" length="middle"/>
+<pin name="P$2" x="-15.24" y="5.08" length="middle"/>
+<pin name="P$3" x="-15.24" y="0" length="middle"/>
+<pin name="P$4" x="-15.24" y="-5.08" length="middle"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="USB-WIFI-DONGLE">
+<description>Esta es una libreria personalizada para la implementacion de un modulo usb
+bien sea wifi, o combo wifi-bluetooth, o de cualquier otro proposito que cumpla con 
+el estandar USB 2.0.
+Las lineas expuestas corresponden a los trazos de un puerto usb tipo A. 
+aunque el modulo tiene una zona referente a la zona de la antena,
+es importante resaltar que la zona de la antena debe quedar expuesta al aire sin ninguna obstruccion o tener contacto con el pcb para un mayor desempeño.</description>
+<gates>
+<gate name="G$1" symbol="USB-WIFI-DONGLE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="USB-A-SMT-MALE">
+<connects>
+<connect gate="G$1" pin="P$1" pad="GND1"/>
+<connect gate="G$1" pin="P$2" pad="D+1"/>
+<connect gate="G$1" pin="P$3" pad="D-1"/>
+<connect gate="G$1" pin="P$4" pad="VBUS1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -14317,6 +14403,19 @@ Module</text>
 <part name="FUSE-0603" library="SparkFun-Resistors" deviceset="1.8MOHM" device="" value="500mA"/>
 <part name="C34" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0603-16V-10%" value="1.0uF"/>
 <part name="SUPPLY47" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="U$5" library="usb-wifi-dongle" deviceset="USB-WIFI-DONGLE" device=""/>
+<part name="SUPPLY48" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="Q5" library="IRLML6402" deviceset="IRLML6402" device="TRPBF" value="AO3400"/>
+<part name="C35" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0603-16V-10%-X7R" value="1.0uF"/>
+<part name="C36" library="SparkFun-Capacitors" deviceset="100UF-POLAR" device="-EIA3528-10V-20%(TANT)" value="100uF"/>
+<part name="C37" library="SparkFun-Capacitors" deviceset="CAP" device="-0805" value="100nF"/>
+<part name="SUPPLY49" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="F2" library="SparkFun-Fuses" deviceset="PPTC" device="_6V500MA-2" value="1206L150"/>
+<part name="SUPPLY50" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY51" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY52" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY58" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY59" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14339,6 +14438,7 @@ EPDC IT8951E-64</text>
 MOSFETS-N  AO3400</text>
 <text x="-73.66" y="-2.54" size="4.318" layer="91">1.8V PWR LT8912B</text>
 <text x="-63.5" y="-106.68" size="5.08" layer="91">HDMI Out</text>
+<text x="165.1" y="-76.2" size="5.08" layer="91">USB Dongle Port</text>
 </plain>
 <instances>
 <instance part="J1" gate="A" x="243.84" y="50.8" smashed="yes">
@@ -14693,8 +14793,8 @@ MOSFETS-N  AO3400</text>
 <instance part="SUPPLY41" gate="GND" x="83.82" y="-48.26" smashed="yes">
 <attribute name="VALUE" x="81.915" y="-51.435" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY43" gate="GND" x="15.24" y="-15.24" smashed="yes">
-<attribute name="VALUE" x="13.335" y="-18.415" size="1.778" layer="96"/>
+<instance part="SUPPLY43" gate="GND" x="7.62" y="-15.24" smashed="yes">
+<attribute name="VALUE" x="5.715" y="-18.415" size="1.778" layer="96"/>
 </instance>
 <instance part="IC2" gate="G$1" x="-190.5" y="-5.08" smashed="yes">
 <attribute name="NAME" x="-191.77" y="-12.7" size="1.778" layer="95" align="center-left"/>
@@ -14776,6 +14876,48 @@ MOSFETS-N  AO3400</text>
 </instance>
 <instance part="SUPPLY47" gate="GND" x="0" y="-142.24" smashed="yes">
 <attribute name="VALUE" x="-1.905" y="-145.415" size="1.778" layer="96"/>
+</instance>
+<instance part="U$5" gate="G$1" x="231.14" y="-109.22" smashed="yes"/>
+<instance part="SUPPLY48" gate="GND" x="205.74" y="-96.52" smashed="yes">
+<attribute name="VALUE" x="203.835" y="-99.695" size="1.778" layer="96"/>
+</instance>
+<instance part="Q5" gate="G$1" x="185.42" y="-106.68" smashed="yes" rot="R270">
+<attribute name="NAME" x="181.61603125" y="-101.59598125" size="1.780809375" layer="95"/>
+<attribute name="VALUE" x="189.227690625" y="-109.22" size="1.77908125" layer="96" rot="R180"/>
+</instance>
+<instance part="C35" gate="G$1" x="185.42" y="-119.38" smashed="yes">
+<attribute name="NAME" x="186.944" y="-116.459" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="184.404" y="-121.539" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="C36" gate="G$1" x="190.5" y="-116.84" smashed="yes">
+<attribute name="NAME" x="191.516" y="-116.205" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="191.516" y="-121.031" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="C37" gate="G$1" x="180.34" y="-119.38" smashed="yes">
+<attribute name="NAME" x="181.864" y="-116.459" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="177.419" y="-122.936" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="SUPPLY49" gate="GND" x="205.74" y="-124.46" smashed="yes">
+<attribute name="VALUE" x="203.835" y="-127.635" size="1.778" layer="96"/>
+</instance>
+<instance part="F2" gate="F1" x="200.66" y="-114.3" smashed="yes">
+<attribute name="NAME" x="202.565" y="-111.125" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="201.93" y="-117.094" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="SUPPLY50" gate="GND" x="78.74" y="78.74" smashed="yes">
+<attribute name="VALUE" x="76.835" y="75.565" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY51" gate="GND" x="50.8" y="78.74" smashed="yes">
+<attribute name="VALUE" x="48.895" y="75.565" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY52" gate="GND" x="96.52" y="78.74" smashed="yes">
+<attribute name="VALUE" x="94.615" y="75.565" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY58" gate="GND" x="149.86" y="0" smashed="yes">
+<attribute name="VALUE" x="147.955" y="-3.175" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY59" gate="GND" x="7.62" y="2.54" smashed="yes">
+<attribute name="VALUE" x="5.715" y="-0.635" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -15071,7 +15213,7 @@ MOSFETS-N  AO3400</text>
 <segment>
 <pinref part="U$3" gate="G$1" pin="GND5"/>
 <pinref part="SUPPLY43" gate="GND" pin="GND"/>
-<wire x1="27.94" y1="-12.7" x2="15.24" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="-12.7" x2="7.62" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="GND"/>
@@ -15131,6 +15273,52 @@ MOSFETS-N  AO3400</text>
 <segment>
 <pinref part="C34" gate="G$1" pin="2"/>
 <pinref part="SUPPLY47" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="SUPPLY48" gate="GND" pin="GND"/>
+<pinref part="U$5" gate="G$1" pin="P$1"/>
+<wire x1="205.74" y1="-93.98" x2="215.9" y2="-93.98" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="-93.98" x2="215.9" y2="-99.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C37" gate="G$1" pin="2"/>
+<pinref part="C35" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="-121.92" x2="185.42" y2="-121.92" width="0.1524" layer="91"/>
+<pinref part="C36" gate="G$1" pin="-"/>
+<wire x1="190.5" y1="-121.92" x2="185.42" y2="-121.92" width="0.1524" layer="91"/>
+<junction x="185.42" y="-121.92"/>
+<wire x1="190.5" y1="-121.92" x2="205.74" y2="-121.92" width="0.1524" layer="91"/>
+<junction x="190.5" y="-121.92"/>
+<label x="200.66" y="-121.92" size="1.778" layer="95"/>
+<pinref part="SUPPLY49" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GND13"/>
+<wire x1="76.2" y1="66.04" x2="76.2" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="SUPPLY50" gate="GND" pin="GND"/>
+<wire x1="76.2" y1="81.28" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GND14"/>
+<wire x1="48.26" y1="66.04" x2="48.26" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="SUPPLY51" gate="GND" pin="GND"/>
+<wire x1="48.26" y1="81.28" x2="50.8" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GND12"/>
+<wire x1="93.98" y1="66.04" x2="93.98" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="SUPPLY52" gate="GND" pin="GND"/>
+<wire x1="93.98" y1="81.28" x2="96.52" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GND7"/>
+<wire x1="132.08" y1="2.54" x2="149.86" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="SUPPLY58" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GND4"/>
+<wire x1="27.94" y1="5.08" x2="7.62" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="SUPPLY59" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="VBUS" class="0">
@@ -15364,6 +15552,12 @@ MOSFETS-N  AO3400</text>
 <pinref part="FUSE-0603" gate="G$1" pin="2"/>
 <wire x1="-10.16" y1="-129.54" x2="-2.54" y2="-129.54" width="0.1524" layer="91"/>
 <label x="-7.62" y="-129.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="Q5" gate="G$1" pin="D"/>
+<wire x1="180.34" y1="-106.68" x2="172.72" y2="-106.68" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="-106.68" x2="172.72" y2="-106.68" width="0.1524" layer="91"/>
+<label x="170.18" y="-106.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VBAT" class="0">
@@ -16364,12 +16558,22 @@ MOSFETS-N  AO3400</text>
 <wire x1="-63.5" y1="10.16" x2="-63.5" y2="5.08" width="0.1524" layer="91"/>
 <label x="-63.5" y="5.08" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="P$30"/>
+<wire x1="27.94" y1="-22.86" x2="12.7" y2="-22.86" width="0.1524" layer="91"/>
+<label x="12.7" y="-22.86" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO-HDMI" class="0">
 <segment>
 <pinref part="Q4" gate="G$1" pin="G"/>
 <wire x1="-33.02" y1="10.16" x2="-33.02" y2="5.08" width="0.1524" layer="91"/>
 <label x="-33.02" y="5.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="P$28"/>
+<wire x1="27.94" y1="-17.78" x2="12.7" y2="-17.78" width="0.1524" layer="91"/>
+<label x="12.7" y="-17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SW2" class="0">
@@ -16542,6 +16746,96 @@ MOSFETS-N  AO3400</text>
 <pinref part="J2" gate="G$1" pin="19"/>
 <wire x1="-35.56" y1="-127" x2="-22.86" y2="-127" width="0.1524" layer="91"/>
 <label x="-27.94" y="-127" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="USB1-" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="USB1-DN"/>
+<wire x1="66.04" y1="66.04" x2="66.04" y2="78.74" width="0.1524" layer="91"/>
+<label x="66.04" y="71.12" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="P$3"/>
+<wire x1="215.9" y1="-109.22" x2="205.74" y2="-109.22" width="0.1524" layer="91"/>
+<label x="205.74" y="-109.22" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="USB1+" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="USB1-DP"/>
+<wire x1="68.58" y1="66.04" x2="68.58" y2="78.74" width="0.1524" layer="91"/>
+<label x="68.58" y="71.12" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="P$2"/>
+<wire x1="215.9" y1="-104.14" x2="205.74" y2="-104.14" width="0.1524" layer="91"/>
+<label x="205.74" y="-104.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P1" class="0">
+<segment>
+<pinref part="C36" gate="G$1" pin="+"/>
+<wire x1="180.34" y1="-114.3" x2="185.42" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="-114.3" x2="190.5" y2="-114.3" width="0.1524" layer="91"/>
+<pinref part="C37" gate="G$1" pin="1"/>
+<pinref part="C35" gate="G$1" pin="1"/>
+<junction x="185.42" y="-114.3"/>
+<pinref part="F2" gate="F1" pin="1"/>
+<wire x1="190.5" y1="-114.3" x2="195.58" y2="-114.3" width="0.1524" layer="91"/>
+<junction x="190.5" y="-114.3"/>
+<wire x1="180.34" y1="-114.3" x2="180.34" y2="-111.76" width="0.1524" layer="91"/>
+<junction x="180.34" y="-114.3"/>
+<wire x1="180.34" y1="-111.76" x2="190.5" y2="-111.76" width="0.1524" layer="91"/>
+<pinref part="Q5" gate="G$1" pin="S"/>
+<wire x1="190.5" y1="-111.76" x2="190.5" y2="-106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="P$4"/>
+<pinref part="F2" gate="F1" pin="2"/>
+<wire x1="215.9" y1="-114.3" x2="208.28" y2="-114.3" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GPIO-USB" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="P$97"/>
+<wire x1="101.6" y1="66.04" x2="101.6" y2="81.28" width="0.1524" layer="91"/>
+<label x="101.6" y="71.12" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="Q5" gate="G$1" pin="G"/>
+<wire x1="187.96" y1="-101.6" x2="187.96" y2="-99.06" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="-99.06" x2="180.34" y2="-99.06" width="0.1524" layer="91"/>
+<label x="177.8" y="-99.06" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPI1-CS" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="SPI1-CSN0"/>
+<wire x1="132.08" y1="-15.24" x2="144.78" y2="-15.24" width="0.1524" layer="91"/>
+<label x="134.62" y="-15.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPI1-CLK" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="SPI1-CLK"/>
+<wire x1="132.08" y1="0" x2="144.78" y2="0" width="0.1524" layer="91"/>
+<label x="134.62" y="0" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPI1-MOSI" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="SPI1-MOSI"/>
+<wire x1="132.08" y1="-2.54" x2="144.78" y2="-2.54" width="0.1524" layer="91"/>
+<label x="134.62" y="-2.54" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPI1-MISO" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="SPI1-MISO"/>
+<wire x1="132.08" y1="-5.08" x2="144.78" y2="-5.08" width="0.1524" layer="91"/>
+<label x="134.62" y="-5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
